@@ -17,4 +17,9 @@ development_database_name: &development_database_name
 development:
   <<: *default
   <<: *development_database_name
-  schema_search_path: "public"
+  schema_search_path: "public,messages"
+
+messages_schema:
+  <<: *default
+  <<: *development_database_name
+  schema_search_path: "messages"
